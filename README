@@ -1,9 +1,6 @@
-smol
-
-A minimal blogging theme for Hugo.
+smol is a minimal blogging theme for Hugo.
 Real-life example can be found at https://bajok.kretes.xyz
-
-This version is based on the original theme created by colorchestra - https://github.com/colorchestra/smol
+This is a fork of the original theme created by colorchestra - https://github.com/colorchestra/smol
 
 Pros:
 - Default dark theme
@@ -57,4 +54,4 @@ Add the following lines to the config file to make use of entries in the header 
         weight = 3 
 
 License:
-This theme is released under the MIT license https://github
+This project is released under the MIT license https://github.com/baj0k/smol/blob/main/LICENSE
