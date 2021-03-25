@@ -11,12 +11,7 @@ Pros:
 - No Google spyware or tracking of any kind
 
 Installation:
-Clone repository to themes directory inside of the hugo project.
-git clone https://github
-
-Set theme option to "smol" in the config file.
-theme = "smol"
-
+Clone repository into themes directory inside of the hugo project and set the theme parameter to "smol" in the config file.
 Add the following lines to the config file to set site parameters and make use of all the menu entries in the header and footer sections.
 
 # Parameters
