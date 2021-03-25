@@ -3,6 +3,7 @@ Real-life example can be found at https://bajok.kretes.xyz
 This is a fork of the original theme created by colorchestra - https://github.com/colorchestra/smol
 
 Pros:
+- Pure HTML/CSS
 - Default dark theme
 - No JavaScript
 - No Google spyware or tracking of any kind
