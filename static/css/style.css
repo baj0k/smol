@@ -1,0 +1,14 @@
+html {overflow-y: scroll}
+body{max-width:800px;margin:40px auto;padding:0 10px;font:14px/1.5 monospace}h1,h2,h3{line-height:1.2}body{color:#ddd;background:#333}a:link{color:#dc9}a:visited{color:#dc9}
+p > code{color: #BBBBBB; background:#000000; padding:2px}
+pre{color: #FFFFFF; background:#000000; padding:24px; overflow-x: auto}
+article{padding:24px 0}
+.center {display: block;margin-left: auto;margin-right: auto;width: 100%;}
+img {display: inline-block; max-width: 150px; height: auto; margin: 15px;}
+figcaption {color: #888; font: 12px/1.5 monospace; text-align: center;}
+figure {margin: auto}
+header {border-bottom: 2px solid #333;}
+.site-title {font-size: 3.5em; font-weight: bold; text-decoration: none; color: #fff;}
+.subtitle {font-size: 1.6em;}
+.name-and-subtitle {display: flex; align-items: center; flex-direction: row;}
+nav {font-size: 1.1em;}

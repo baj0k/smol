@@ -1,0 +1,19 @@
+  <article>
+        <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+        <p> <b>
+                Posted on
+                <time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time> {{ with .Params.categories }} in {{ range first 1 . }}
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} , 
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}
+            </b> {{ with .Params.tags }} <br>
+            Tags: {{ range first 1 . }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} , 
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}
+        </p>
+        <div> {{ if .Params.image }}
+            <div class="summary-image">
+                <img src="/{{ path.Join .File.Dir .Params.image }}" />
+            </div> {{ end }} {{ .Summary }} {{ if .Truncated }}
+            <a href="{{ .Permalink }}">Read more...</a> {{ end }}
+        </div>
+        </article>

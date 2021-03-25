@@ -1,0 +1,64 @@
+smol
+
+A minimal blogging theme for Hugo.
+Real-life example can be found at https://bajok.kretes.xyz
+
+This version is based on the original theme created by colorchestra - https://github.com/colorchestra/smol
+
+Pros:
+- Default dark theme
+- No JavaScript
+- No Google spyware or tracking of any kind
+
+Installation:
+Clone repository to themes directory inside of the hugo project.
+git clone https://github
+
+Set theme option to "smol" in the config file.
+theme = "smol"
+
+Add the following lines to the config file to set site parameters and make use of all the menu entries in the header and footer sections.
+
+# Parameters
+[params]
+    subtitle = "Your blog subtitle goes here!"
+    dateFmt = "02.01.2006 15:04"
+
+# Header
+[menu]
+  [[menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 1 
+
+  [[menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories/"
+        weight = 2 
+
+  [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 3
+
+# Footer
+  [[menu.footer]]
+        name = "Github"
+        url = "https://github.com/example"
+        weight = 1 
+
+    [[menu.footer]]
+        name = "Mastodon"
+        url = "https://example.com/@user"
+        weight = 2 
+
+    [[menu.footer]]
+        name = "Imprint"
+        url = "/imprint"
+        weight = 3 
+
+License:
+This theme is released under the MIT license https://github

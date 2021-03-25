@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type=text/css>body{font-family:monospace;}</style> {{ if (eq .Title .Site.Title) }} {{ with $title := .Title }}
+    <title>{{ . }}</title> {{ end }} {{ end }}
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}"> {{ range .Site.Params.customCSS -}}
+    <link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}"> {{- end }} {{ with .OutputFormats.Get "RSS" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }} {{- end }}
+</head>
+<body>
+	{{ partial "header" . }}	{{ block "main" . }}{{ end }}	{{ partial "footer" . }}
+</body>
+</html>
