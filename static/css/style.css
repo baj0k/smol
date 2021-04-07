@@ -14,6 +14,7 @@ header {border-bottom: 2px solid #333}
 .subtitle {font-size: 1.6em}
 .name-and-subtitle {display: flex; align-items: center; flex-direction: row}
 nav {font-size: 1.1em}
+.next-prev {text-align: center; display: flex; margin: -1em 4em 0em 4em; justify-content: space-between; }
 .post-title {font-size: 1.1em; font-weight: bold; color: #fff}
 .site-latest {font-size: 1.2em; font-weight: bold; color: #fff}
 #loadOverlay{display: none;}

@@ -1,19 +1,21 @@
 {{ define "main" }}
 <main>
-  <article> {{ if or .Date .Params.tags .Params.categories }}
-    <h1>{{ .Title }}</h1>
-      <p> <b> Date: {{ if .Date }}
-          <time> {{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time> {{ end }} {{ with .Params.categories }} </b> | <b> Categories: {{ range first 1 . }}
+    <article> {{ if or .Date .Params.tags .Params.categories }}
+        <h1>{{ .Title }}</h1>
+        <p> <b> Date: {{ if .Date }}
+        <time> {{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time> {{ end }} {{ with .Params.categories }}
+        </b> | <b> Categories: {{ range first 1 . }}
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} ,
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}
-      </b> {{ with .Params.tags }} | <b> Tags: </b> {{ range first 1 . }}
-      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} ,
-      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}
-      </p> <hr> {{ end }}
-    <div> {{ .Content }} </div>
-  </article>
+        </b> {{ with .Params.tags }} | <b> Tags: </b> {{ range first 1 . }}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} ,
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}
+        </p> <hr> {{ end }}
+        <div> {{ .Content }} </div>
+    </article>
 </main> {{ $reg := (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-<div class="next-prev"> {{ with $reg.Prev . }}
-    <a class="prev" href="{{ .Permalink }}" title="{{ .Title }}">« {{ .Title | truncate 50 "..." }}</a> {{ end }} {{ with $reg.Next . }}
-    <a class="next" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | truncate 50 "..." }} »</a> {{ end }}
-</div> {{ partial "sidebar.html" . }} {{ if and (or ($reg.Prev .) ($reg.Next .)) (.Site.Params.issoUrl) }} {{ end }} {{ end }}
+    <div class="next-prev"> {{ with $reg.Prev . }}
+        <a class="prev" href="{{ .Permalink }}" title="{{ .Title }}">« {{ .Title | truncate 50 "..." }}</a> {{ end }} {{ with $reg.Next . }}
+        <a class="next" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | truncate 50 "..." }} »</a> {{ end }}
+    </div> {{ if and (not (eq .Title "About" )) (not (eq .Title "Equipment")) }} {{ partial "sidebar.html" . }} {{ end }}
+           {{ if and (or ($reg.Prev .) ($reg.Next .)) (.Site.Params.issoUrl) }} {{ end }} {{ end }}
