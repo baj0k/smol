@@ -1,10 +1,9 @@
 {{ define "main" }}
 <main>
     <article> {{ if or .Date .Params.tags .Params.categories }}
+        <p> Date: {{ if .Date }} <time> {{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time> {{ end }} </p>
         <h1>{{ .Title }}</h1>
-        <p> <b> Date: {{ if .Date }}
-        <time> {{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time> {{ end }} {{ with .Params.categories }}
-        </b> | <b> Categories: {{ range first 1 . }}
+        <p> {{ with .Params.categories }} <b> Categories: {{ range first 1 . }}
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} ,
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}
         </b> {{ with .Params.tags }} | <b> Tags: </b> {{ range first 1 . }}
