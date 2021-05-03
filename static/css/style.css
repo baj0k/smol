@@ -1,20 +1,17 @@
-body{max-width:950px;color:#ddd;background:#333;margin:40px auto;padding:0 10px;font:16px/1.5 monospace}
-h1,h2,h3{line-height:1.2}
-a:link{color:#dc9;font-weight: bold; text-decoration: none}a:visited{color:#dc9;font-weight: bold; text-decoration: none}
-p > code{color: #BBBBBB; background:#212121; padding:2px}
-pre{color: #BBBBBB; font-size: 1em; font-weight: bold; background:#212121; padding:24px; overflow-x: auto; white-space: pre-wrap; padding: 5px 10px}
-article{padding:24px 0}
-article p {font-size: 1.1em; color: #fff}
-.center {display: block;margin-left: auto;margin-right: auto;width: 100%}
-img {display: inline-block; max-width: 150px; height: auto; margin: 15px}
-figcaption {color: #888; font: 12px/1.5 monospace; text-align: center}
-figure {margin: auto}
-header {border-bottom: 2px solid #333}
-.site-title {font-size: 3.5em; font-weight: bold}
-.subtitle {font-size: 1.6em}
-.name-and-subtitle {display: flex; align-items: center; flex-direction: row}
-nav {font-size: 1.1em}
-.next-prev {text-align: center; display: flex; margin: -1em 4em 0em 4em; justify-content: space-between; }
-.post-title {font-size: 1.1em; font-weight: bold; color: #fff}
-.site-latest {font-size: 1.2em; font-weight: bold; color: #fff}
-#loadOverlay{display: none;}
+body{color:#aaa;background:#111;padding:10px;font:16px/1.2 monospace}
+img{display:inline-block;max-width:150px;height:auto;margin: 0px 15px 10px 5px}
+a:link{color:#997;font-weight:bold}a:visited{color:#997;font-weight:bold}
+article{font-size:1.2em}
+article *{color:#ddd}
+code{color:#ccc}
+pre{background:#000!important;padding:5px 10px}
+hr{color:#444}
+header{border-bottom:2px solid #333}
+.site-title{font-size:2.5em;font-weight:bold}
+.subtitle{font-size:1.7em}
+.name-and-subtitle{display:flex;align-items:center;flex-direction:row}
+nav{font-size:1.2em}
+.next-prev{text-align:center;display:flex;margin:-1em 4em 0em 4em;justify-content:space-between;}
+.post-title{font-size:1.1em;font-weight:bold;color:#fff}
+.site-latest{font-size:1.2em;font-weight:bold;color:#fff}
+#loadOverlay{display:none;}
