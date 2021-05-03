@@ -1,4 +1,4 @@
-body{max-width:1000px;margin:10px;color:#aaa;background:#111;padding:10px;font:16px/1.2 monospace}
+body{max-width:1100px;margin:10px auto;color:#aaa;background:#111;padding:10px;font:16px/1.2 monospace}
 img{display:inline-block;max-width:150px;height:auto;margin: 0px 15px 10px 5px}
 a:link{color:#997;font-weight:bold}a:visited{color:#997;font-weight:bold}
 article{font-size:1.2em}
