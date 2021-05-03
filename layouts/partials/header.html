@@ -3,7 +3,7 @@
             <img class="site-image" src="/profile.webp" loading="lazy" alt="bajok" />
             <div>
                 <span class="site-title">~{{ .Site.Title }}</span> {{ with .Site.Params.Subtitle }} <br>
-                <span class="subtitle"><i>{{ . }}</i></span> {{- end }}
+                <span class="subtitle"><i>{{ . }}</i><b style="color:#111"> BTW I USE ARCH </b></span> {{- end }}
                 <nav> 
                         <a href="{{ .Site.Home.Permalink }}"><b>Home</b></a> {{ with .Site.Menus.main }} {{ range . }}
                       | <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a> {{ end }} {{ end }}
