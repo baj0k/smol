@@ -3,7 +3,7 @@
     <article> {{ if or .Date .Params.tags .Params.categories }}
         <p> Date: {{ if .Date }} <time> {{ .Date.Format (default "2006-01-02" .Site.Params.dateFmt) }}</time> {{ end }}{{ if .Params.origin }}
         | From: {{ .Params.origin }}{{ end }} </p>
-        <h1>{{ .Title }}</h1>
+        <h2>{{ .Title }}</h2>
         <p> {{ with .Params.categories }} <b> Categories: {{ range first 1 . }}
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} ,
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{ end }}

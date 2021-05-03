@@ -1,5 +1,5 @@
 <article>
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <p><b> Date: <time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time> 
         {{ with .Params.categories }} </b> | <b> Categories: {{ range first 1 . }}
         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{- end -}} {{- range after 1 . -}} , 
